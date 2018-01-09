@@ -17,9 +17,6 @@ function setUp() {
         if (event.key.toLowerCase() == 'r') reset();
         if (event.key.toLowerCase() == 't') recordCurrentTime();
     });
-
-
-
 }
 
 function startStop() {
