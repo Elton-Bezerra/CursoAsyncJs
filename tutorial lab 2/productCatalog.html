@@ -1,56 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="library.js"></script>
     <title>Catálogo de Produtos</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
 </head>
+
 <body>
-    
-    <div>
-        <h3>Search Product by Id</h3>
-        <input id="input">
-        <button id="inputButton">Search Product</button>
-    </div>
-    <div>
-        <h3>Search Product by Type</h3>
-        <input id="type">
-        <button id="searchType">Search Type</button>
-    </div>
-    <div>
-        <h3>Search Product by Price</h3>
-        <input id="price">
-        <button id="searchPrice">Search Price</button>
-    </div>
-    <div>
-        <h3>Examined Product</h3>
-        <p id="productText">Product Id: <br>Price: <br>Type: </p>
+    <div class="container">
+        <div class="row">
+            <form class="col-md-12">
+                <!-- FORMS -->
+                <div class="form-group">
+                    <h3>Search Product by Id</h3>
+                    <input class="form-control" id="input">
+                    <button class="btn btn-default" id="inputButton">Search Product</button>
+                </div>
 
-        <h3>List of Similar Products</h3>
-        <table id="similarTable" width="300px" border="1">
-            <tr>
-                <th>ProductId</th>
-                <th>Type</th>
-                <th>Price</th>
-                <th>Examine</th>
-            </tr>
-        </table>
-    </div>
+                <div class="form-group">
+                    <h3>Search Product by Type</h3>
+                    <input class="form-control" id="type">
+                    <button class="btn btn-default" class="btn btn-default" id="searchType">Search Type</button>
+                </div>
 
-    <div>
-        <h3>List of All Products</h3>
-        <table id="allTable" width="300px" border="1">
-            <tr>
-                <th>ProductId</th>
-                <th>Type</th>
-                <th>Price</th>
-                <th>Examine</th>
-            </tr>
-        </table>
-    </div>
+                <div class="form-group">
+                    <h3>Search Product by Price</h3>
+                    <input class="form-control" id="price">
+                    <button class="btn btn-default" id="searchPrice">Search Price</button>
+                </div>
+        </div>
+        <!-- END-FORM -->
+        <div class="col-md-12">
+            <h3>Examined Product</h3>
+            <p id="productText">Product Id:
+                <br>Price:
+                <br>Type: </p>
 
+            <div>
+                <h3>List of Similar Products</h3>
+
+                <table class="table table-bordered" id="similarTable">
+                    <tr>
+                        <th>ProductId</th>
+                        <th>Type</th>
+                        <th>Price</th>
+                        <th width="1%">Examine</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div>
+                <h3>List of All Products</h3>
+
+                <table class="table" id="allTable">
+                    <tr>
+                        <th>ProductId</th>
+                        <th>Type</th>
+                        <th>Price</th>
+                        <th width="1%">Examine</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
     <script src="productCatalog.js"></script>
 </body>
+
 </html>

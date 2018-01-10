@@ -25,6 +25,7 @@ function createTableHeader(tableId) {
     th2.appendChild(document.createTextNode("Type"));
     th3.appendChild(document.createTextNode("Price"));
     th4.appendChild(document.createTextNode("Examine"));
+    th4.style.width = '1%';
 
     tableHeaderRow.appendChild(th1);
     tableHeaderRow.appendChild(th2);
@@ -52,13 +53,14 @@ function updateTable(tableId, productArray) {
 
 
         td4.addEventListener('click', function () {
-            processSearch(this.parentNode.firstChild.innerHTML);
+            processSearch(this.parentNode.firstChild.innerHTML, 'id');
         });
 
         td1.appendChild(document.createTextNode(productArray[i].id));
         td2.appendChild(document.createTextNode(productArray[i].type));
         td3.appendChild(document.createTextNode(productArray[i].price));
         td4.appendChild(document.createTextNode("Examine"));
+        td4.className += 'btn btn-success';
 
         tr.appendChild(td1);
         tr.appendChild(td2);
