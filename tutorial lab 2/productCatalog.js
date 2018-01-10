@@ -76,3 +76,15 @@ function getIntersection(arrA, arrB, searchedId){
     });
     return similarArray;
 }
+
+function processSearch(searchId){
+    api.searchProductById(searchId).then(function (val){
+        return Promise.all([api.searchProductsByPrice(val.price,50),api.searchProductsByType(val.type),val]);
+    }).then(function(val){
+        var similarArray = getIntersection(val[0], val[1], val[2].id);
+        updateExaminedText(val[2]);
+        updateTable('similarTable', similarArray);
+    }).catch(function(error){
+        alert(error);
+    });
+}
