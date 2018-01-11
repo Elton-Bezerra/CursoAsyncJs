@@ -47,13 +47,25 @@
                 return Promise.reject(new Error(response.statusText));
         }).then((res) => {
             console.log(res);
-            var li1 = document.createElement("li");
-            var li2 = document.createElement("li");
-            li1.appendChild(document.createTextNode('Gender: ' + res[0].faceAttributes.gender));
-            li2.appendChild(document.createTextNode('Age: ' + res[0].faceAttributes.age));
-            atributos.appendChild(li1);
-            atributos.appendChild(li2);
+            cleanAtributes();
+            var p1 = document.createElement("p");
+            var p2 = document.createElement("p");
+            p1.appendChild(document.createTextNode('Gender: ' + res[0].faceAttributes.gender));
+            p2.appendChild(document.createTextNode('Age: ' + res[0].faceAttributes.age));
+            atributos.appendChild(p1);
+            atributos.appendChild(p2);
+        }).catch((err) => {  
+            cleanAtributes();   
+            var p = document.createElement("p");
+            p.appendChild(document.createTextNode('No Faces Detected'));
+            atributos.appendChild(p);        
         });
+
+        function cleanAtributes(){
+            while (atributos.hasChildNodes()) {
+                atributos.removeChild(atributos.firstChild);
+            }
+        }
     }
     setUp();
 })();
