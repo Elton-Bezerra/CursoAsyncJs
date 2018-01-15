@@ -23,12 +23,12 @@ function *gen(){
         throw new Error("Invalid Input - Select different ships!");   
 
     //fetch starship1
-    var starshipResponse1 = yield fetch("https://swapi.co/api/starships/"+ document.getElementById("ships1").value);
-    var starship1 = yield starshipResponse.json();
+    var starshipResponse1 = yield fetch("https://swapi.co/api/starships/"+ document.getElementById("ships1").value + "/");
+    var starship1 = yield starshipResponse1.json();
 
     //fetch starship2
-    var starshipResponse2 = yield fetch("https://swapi.co/api/starships/"+ document.getElementById("ships2").value);
-    var starship2 = yield starshipResponse.json();
+    var starshipResponse2 = yield fetch("https://swapi.co/api/starships/"+ document.getElementById("ships2").value + "/");
+    var starship2 = yield starshipResponse2.json();
 
     //fetch the characters
     var characters = film.characters;
