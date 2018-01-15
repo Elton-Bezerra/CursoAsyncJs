@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>StarShips</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h1>StarWars API - StarShips</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-10 form-inline">
+                    <h3>Select two Starships from the dropdown lists to compare</h3>
+                    <select class="form-control" id="ships1">
+                        <option value="2">CR90 Corvette - 2</option>
+                        <option value="75">V-wing - 75</option>
+                        <option value="74">Belbullab-22 Starfighter - 74</option>
+                        <option value="65"> Jedi Interceptor - 65</option>
+                        <option value="3">Star Destroyer - 3</option>
+                        <option value="59">Trade Fedaration Cruiser - 59</option>
+                        <option value="58">Solar Sailer -58</option>
+                        <option value="63">Republic Attack Cruiser - 63</option>
+                        <option value="28">A-wing - 28</option>
+                        <option value="29">B-wing - 29</option>
+                        <option value="39"> Naboo Fighter - 39</option>
+                        <option value="10">Millenium Falcon - 10</option>
+                    </select>
+                    <select class="form-control" id="ships2">
+                            <option value="2">CR90 Corvette - 2</option>
+                            <option value="75">V-wing - 75</option>
+                            <option value="74">Belbullab-22 Starfighter - 74</option>
+                            <option value="65"> Jedi Interceptor - 65</option>
+                            <option value="3">Star Destroyer - 3</option>
+                            <option value="59">Trade Fedaration Cruiser - 59</option>
+                            <option value="58">Solar Sailer -58</option>
+                            <option value="63">Republic Attack Cruiser - 63</option>
+                            <option value="28">A-wing - 28</option>
+                            <option value="29">B-wing - 29</option>
+                            <option value="39"> Naboo Fighter - 39</option>
+                            <option value="10">Millenium Falcon - 10</option>
+                    </select>
+                    <button id="btnCompare" class="btn btn-default">Compare</button>
+                    <br>
+                </div>
+
+                <div class="col-md-10" style="margin-top: 20px">
+
+
+                    <table class="table table-bordered" id="shipsTable">
+                        <tr>
+                            <th></th>
+                            <th>Starship 1</th>
+                            <th>Starship 2</th>
+                        </tr>
+                        <tr>
+                            <th>Name</th>                            
+                        </tr>
+                        <tr>
+                            <th>Cost</th>
+                        </tr>
+                        <tr>
+                            <th>Speed</th>
+                        </tr>
+                        <tr>
+                            <th>Cargo Size</th>
+                        </tr>
+                        <tr>
+                            <th>Passengers</th>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="starships.js"></script>
+</body>
+
+</html>
